@@ -1,0 +1,165 @@
+body {
+  margin: 0;
+}
+
+
+/* Profile icon */
+.profile-icon {
+  margin-left: auto;
+  cursor: pointer;
+}
+
+.profile-icon img {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+}
+
+/* Back Button and Heading */
+/* Header row wrapper for back button + title */
+.header-row {
+  position: relative;
+  margin-top: 90px;   /* same spacing from navbar on all pages */
+  display: flex;
+  align-items: center;
+  justify-content: center; /* centers heading text */
+}
+
+/* Back button inside header row */
+.header-row .back-button {
+  position: absolute;
+  left: 20px;
+  top: 50%;
+  transform: translateY(-50%); /* keeps arrow vertically centered */
+  background: rgba(255, 255, 255, 0.85);
+  border: none;
+  padding: 10px 18px;
+  border-radius: 8px;
+  font-size: 16px;
+  font-weight: bold;
+  cursor: pointer;
+  z-index: 1000;
+  transition: all 0.2s ease-in-out;
+}
+
+/* Back button hover */
+.header-row .back-button:hover {
+  background: #f0f0f0;
+  transform: translateY(-50%) scale(1.05);
+}
+
+/* Consistent heading style */
+.header-row h2 {
+  margin: 0;
+  font-size: 25px;
+  font-weight: bold;
+  color: black;
+  text-align: center;
+}
+
+.header-row p{
+  font-size: 18px;
+  color:#1f3941
+}
+/* Mode selection cards container - center aligned */
+.mode-cards {
+  display: flex;
+  gap: 20px;
+  justify-content: center; /* CENTER the cards horizontally */
+  flex-wrap: wrap;
+  margin-top: 60px;
+}
+
+/* Card base */
+.mode-card {
+  border-radius: 15px;
+  padding: 25px;
+  width: 300px;
+  height:300px;
+  box-shadow: 0 4px 8px rgb(0 0 0 / 0.1);
+  color: black;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  cursor: pointer;
+}
+
+/* Hover effect on cards */
+.mode-card:hover {
+  transform: scale(1.05);
+  box-shadow: 0 8px 16px rgb(0 0 0 / 0.2);
+}
+
+/* Hover disabled for locked cards */
+/* .medium-mode:hover,
+.hard-mode:hover {
+  cursor: not-allowed;
+  transform: none;
+  box-shadow: 0 4px 8px rgb(0 0 0 / 0.1);
+} */
+
+/* Card titles */
+.mode-card h3 {
+  font-weight: bold;
+}
+
+.mode-card p {
+  font-size: 18px;
+  color:black;
+}
+
+/* Status text */
+.mode-status {
+  font-weight: 600;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  font-size: 30px;
+}
+
+/* Easy mode */
+.easy-mode {
+  background-color: #f2e96d;
+  
+}
+
+.easy-mode .mode-status {
+  color: #333;
+}
+
+.start-button {
+  margin-top: 10px;
+  padding: 10px;
+  border-radius: 8px;
+  border: none;
+  font-weight: 600;
+  width: 100%;
+  color: white;
+  margin-top: 30px;
+}
+
+/* Easy button */
+.easy-button {
+  background-color: #7c6857;
+  cursor: pointer;
+}
+
+/* Medium mode */
+.medium-mode {
+  background-color: #3bb19b;
+  color: white;
+}
+
+.medium-mode .start-button {
+  background-color: #1f3941;
+  cursor: not-allowed;
+}
+
+/* Hard mode */
+.hard-mode {
+  background-color: #d7548c;
+  color: white;
+}
+
+.hard-mode .start-button {
+  background-color: #8b166f;
+  cursor: not-allowed;
+}

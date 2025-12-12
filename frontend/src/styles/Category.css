@@ -1,0 +1,97 @@
+
+/*3bb19b */
+/* General */
+body { 
+  margin: 0;
+  font-family: 'Segoe UI', sans-serif;
+  background-color: #5de4cb;
+}
+
+/* Navbar */
+
+
+/* Content layout */
+.content {
+  display: flex;
+  padding: 40px;
+  gap: 40px;
+  margin-top: 60px;
+}
+
+/* Left image */
+.left-image img {
+  width: 400px;
+  height: 600px;
+  border-radius: 12px;
+  border: none;
+  
+}
+
+/* Right side list */
+.right-list {
+  flex: 1;
+  background: linear-gradient(180deg, #3bb19b, #f0faff);
+  border-radius: 12px;
+  padding: 25px 35px;
+  box-shadow: 0px 4px 14px rgba(0,0,0,0.1);
+  color:#022821
+}
+
+.right-list h2 {
+  margin-bottom: 25px;
+  font-size: 22px;
+  color: #033d38;
+  border-bottom: 3px solid #022821;
+  padding-bottom: 10px;
+}
+
+.concept-item {
+  list-style: none;
+  padding: 14px;
+  margin-bottom: 12px;
+  background: #f9fafb;
+  border-left: 5px solid #3bb19b;
+  border-radius: 8px;
+  transition: all 0.25s ease;
+  cursor: pointer;
+  font-size: 16px;
+}
+
+.concept-item:hover {
+  background: #e0f7f1;
+  transform: translateX(6px);
+  box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+}
+
+.more-btn {
+  cursor: pointer;
+  padding: 10px 20px;
+  background-color: #3bb19b;
+  border: none;
+  color: white;
+  margin: 20px auto;
+  border-radius: 10px;
+  display: block; /* Ensures it can be centered with margin auto */
+  font-size: 16px;
+  font-weight: bold;
+  transition: background 0.3s ease;
+}
+
+.more-btn:hover {
+  background-color: green;
+}
+
+@keyframes slideInFromLeft {
+  0% {
+    opacity: 0;
+    transform: translateX(-100%);
+  }
+  100% {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+.left-image img {
+  animation: slideInFromLeft 1s ease forwards;
+}

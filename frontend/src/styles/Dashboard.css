@@ -1,0 +1,352 @@
+/* General Body Styles */
+body {
+    margin: 0;
+    font-family: 'Poppins', sans-serif;
+    background: linear-gradient(135deg, #5df5d9, rgb(216, 247, 247));
+    background-attachment: fixed;
+    color: white;
+}
+
+/* Profile Section */
+.profile-section {
+    display: flex;
+    gap: 30px;
+    padding: 30px;
+    background: linear-gradient(
+        145deg,
+        rgba(34, 160, 137, 0.8),
+        rgba(255, 255, 255, 0.05)
+    );
+    border: 1px solid rgba(255, 255, 255, 0.25);
+    margin: 120px auto 20px;
+    border-radius: 15px;
+    backdrop-filter: blur(12px);
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.25);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    max-width: 1100px;
+    align-items: flex-start;
+    color: white;
+    margin-top: 20px;
+}
+
+.profile-section:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 12px 30px rgba(0, 0, 0, 0.35);
+}
+
+.extra-large-profile-img {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 4px solid white;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.4);
+    transition: all 0.3s ease;
+    margin-left: 20px;
+}
+
+.extra-large-profile-img:hover {
+    box-shadow: 0 0 25px #01251f, 0 0 35px #03473b;
+    transform: scale(1.05);
+}
+
+.profile-image-upload {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+}
+
+/* Upload + Remove buttons container */
+.image-buttons {
+  display: flex;
+  gap: 10px;
+  margin-top: 10px;
+  margin-left: 15px;
+}
+
+.upload-btn,
+.remove-btn {
+  padding: 5px 12px;
+  background: linear-gradient(90deg, #011e18, #025445);
+  color: white;
+  border-radius: 6px;
+  font-weight: bold;
+  cursor: pointer;
+  border: none;
+  transition: all 0.3s ease;
+}
+
+.upload-btn:hover,
+.remove-btn:hover {
+  background: linear-gradient(90deg, darkorange, orange);
+  transform: scale(1.05);
+}
+
+.profile-details {
+    flex: 1;
+}
+
+.profile-details h2 {
+    margin-bottom: 20px;
+    color: black;
+    font-size: 26px;
+    text-align: left;
+    margin-top: 20px;
+    margin-left: 25px;
+}
+
+.profile-details p {
+    margin-left: 25px;
+    font-size: 18px;
+    color: black;
+}
+
+.profile-details input,
+.profile-details textarea {
+    display: block;
+    width: 70%;
+    margin-bottom: 30px;
+    padding: 8px 10px;
+    border-radius: 6px;
+    border: none;
+    font-size: 14px;
+    background: rgba(163, 252, 235, 0.85);
+    margin-left: 25px;
+    margin-top: 15px;
+    color: black;
+}
+
+.profile-details textarea {
+    height: 70px;
+    margin-top: 15px;
+}
+
+.form-label {
+    font-size: 16px;
+    font-weight: bold;
+    margin-left: 25px;
+    margin-top: 15px;
+    color: black;
+}
+
+/* Buttons */
+.save-btn,
+.edit-btn {
+    background: #033d38;
+    color: white;
+    padding: 8px 16px;
+    border: none;
+    border-radius: 6px;
+    font-weight: bold;
+    cursor: pointer;
+    justify-content: center;
+    display: block;
+    margin-left: 250px;
+}
+
+.save-btn:hover,
+.edit-btn:hover {
+    background: #033a30;
+}
+
+/* Radio Group */
+.radio-group {
+  display: flex;
+  gap: 15px;
+  margin-top: 5px;
+}
+
+.radio-group label {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  cursor: pointer;
+  margin-left: 25px;
+  color: black;
+  margin-bottom: 20px;
+}
+
+.radio-group input[type="radio"] {
+  transform: scale(1.3);
+  margin: 0;
+}
+
+/* Stats + Concepts */
+.stats-concepts {
+    display: flex;
+    gap: 40px;
+    padding: 40px;
+    align-items: flex-start;
+    border-radius: 12px;
+    border: 1px solid rgba(255, 255, 255, 0.25);
+    backdrop-filter: blur(12px);
+    box-shadow: 0px 4px 14px rgba(0,0,0,0.1);
+    max-width: 1100px;
+    margin: auto;
+    color: #01251f;
+}
+
+.left-column {
+    display: flex;
+    flex-direction: column;
+    gap: 50px;
+    flex: 0.3;
+}
+
+/* Stat Cards */
+.stat-card {
+    background: linear-gradient(
+        145deg,
+        rgba(34, 160, 137, 0.8),
+        rgba(255, 255, 255, 0.05)
+    );
+    border-radius: 12px;
+    padding: 20px;
+    text-align: center;
+    color: #033a30;
+    box-shadow: 0 4px 14px rgba(0,0,0,0.1);
+}
+
+.stat-card h3 {
+    font-size: 18px;
+    margin-bottom: 8px;
+}
+
+.stat-card p {
+    font-size: 22px;
+    font-weight: bold;
+}
+
+.stat-icon {
+    width: 50px;
+    height: 50px;
+    margin-bottom: 10px;
+}
+
+/* Right Column */
+.concepts-card {
+    background: linear-gradient(
+        145deg,
+        rgba(80, 200, 180, 0.30),
+        rgba(255, 255, 255, 0.5)
+    );
+    border-radius: 12px;
+    padding: 25px;
+    flex: 0.7;
+    box-shadow: 0 4px 14px rgba(0,0,0,0.1);
+    color: white;
+}
+
+.concepts-card h3 {
+    margin-bottom: 20px;
+    font-size: 20px;
+    color: #033d38;
+    border-bottom: 3px solid #3bb19b;
+    padding-bottom: 8px;
+}
+
+.concepts-card ul {
+    list-style: none;
+    padding: 0;
+}
+
+.concepts-card li {
+    padding: 14px;
+    margin-bottom: 12px;
+    background: linear-gradient(90deg, #f0fff9, #e0f7f1);
+    border-left: 5px solid #3bb19b;
+    border-radius: 8px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: all 0.25s ease;
+    color: #01261f;
+}
+
+.concepts-card li:hover {
+    background: linear-gradient(90deg, #e0f7f1, #c6f1e7);
+    transform: translateX(6px);
+    box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+}
+
+/* Profile + extra image */
+.profile-and-image-container {
+  display: flex;
+  align-items: flex-start;
+  gap: 30px;
+  margin-top: 20px;
+}
+
+.extra-image-inside {
+  margin-top: 20px;
+  display: flex;
+  justify-content: center;
+  animation: popIn 0.8s ease-out forwards;
+  transform: scale(0);
+}
+
+.extra-image-inside img {
+  max-width: 200px;
+  border-radius: 12px;
+  height: 200px;
+  margin-right: 20px;
+}
+
+/* Pop-in Animation */
+@keyframes popIn {
+  0% {
+    transform: scale(0);
+    opacity: 0;
+  }
+  60% {
+    transform: scale(1.1);
+    opacity: 1;
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+
+.pop-in-element {
+  animation: popIn 1.5s ease-out forwards;
+}
+/* Header row wrapper for back button + title */
+.header-row {
+  position: relative;
+  margin-top: 90px;   /* same spacing from navbar on all pages */
+  display: flex;
+  align-items: center;
+  justify-content: center; /* centers heading text */
+}
+
+/* Back button inside header row */
+.header-row .back-button {
+  position: absolute;
+  left: 20px;
+  top: 50%;
+  transform: translateY(-50%); /* keeps arrow vertically centered */
+  background: rgba(255, 255, 255, 0.85);
+  border: none;
+  padding: 10px 18px;
+  border-radius: 8px;
+  font-size: 16px;
+  font-weight: bold;
+  cursor: pointer;
+  z-index: 100;
+  transition: all 0.2s ease-in-out;
+}
+
+/* Back button hover */
+.header-row .back-button:hover {
+  background: #f0f0f0;
+  transform: translateY(-50%) scale(1.05);
+}
+
+/* Consistent heading style */
+.header-row h2 {
+  margin: 0;
+  font-size: 25px;
+  font-weight: bold;
+  color: black;
+  text-align: center;
+}

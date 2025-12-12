@@ -1,0 +1,89 @@
+/* Bot button with wave animation */
+.bot-wave img { animation: wave 2s infinite; }
+@keyframes wave { 0%,100%{transform:rotate(0deg);} 50%{transform:rotate(15deg);} }
+
+/* Chatbot button */
+#chatbot-button {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  background: #d9fbf5;
+  border-radius: 50%;
+  width: 100px;
+  height: 100px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+  cursor: pointer;
+  z-index: 9999;
+  overflow: hidden;              /* ensure image doesn’t overflow */
+}
+
+/* Chatbot icon image */
+#chatbot-button img {
+  width: 100%;                   /* fill the button */
+  height: 100%;                  /* keep proportions */
+  object-fit: cover;             /* crop if necessary */
+  border-radius: 50%;            /* keep the image circular */
+}
+
+/* Chatbot panel (NOTE: display is FLEX, not none) */
+#chatbot-panel {
+  position: fixed;
+  bottom: 100px; right: 20px;
+  width: 500px;
+  height: 500px;
+  background: #fff;
+  border-radius: 16px;
+  box-shadow: 0 6px 18px rgba(0,0,0,0.25);
+  display: flex;
+  flex-direction: column;
+  font-family: 'Segoe UI', sans-serif;
+  z-index: 9999;
+}
+/* Header */
+.chatbot-header {
+  display: flex; align-items: center; gap: 10px;
+  background: #187b76; color: white;
+  padding: 10px 15px; border-radius: 16px 16px 0 0;
+  
+}
+.chatbot-avatar { width: 35px; height: 35px; border-radius: 50%; }
+.close-chatbot { margin-left: auto; cursor: pointer; }
+
+/* Messages */
+#chatbot-messages {
+  display: flex;
+  flex-direction: column;
+  padding: 12px;
+  overflow-y: auto;
+  flex: 1;   /* grows to fill remaining space */
+}
+.bot-message {
+  align-self: flex-start;   /* stick to left */
+  background: #37c9ae;
+  color: white;
+  padding: 8px 12px;
+  border-radius: 12px;
+  margin-bottom: 8px;
+  font-size: 14px;
+}
+
+.user-message {
+  align-self: flex-end;     /* stick to right */
+  background: #edae50;
+  padding: 8px 12px;
+  border-radius: 12px;
+  margin-bottom: 8px;
+  font-size: 14px;
+}
+
+
+/* Input area */
+.chatbot-input-area {
+  display: flex;
+  border-top: 1px solid #ddd;
+}
+#chatbot-input { flex: 1; padding: 8px; border: none; font-size: 14px; color: #333;}
+#chatbot-send { background: #187b76; color: white; border: none; padding: 8px 14px; cursor: pointer; }

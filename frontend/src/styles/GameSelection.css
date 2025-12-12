@@ -1,0 +1,142 @@
+
+body{
+  margin:0;
+}
+
+/* Game Cards */
+.game-cards {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  flex-wrap: wrap;
+  margin-top: 30px;
+  
+}
+
+
+.game-card {
+  background: white;
+  border-radius: 15px;
+  overflow: hidden;
+  width: 300px;  /* wider card */
+  height: 400px; /* fixed taller height */
+  display: flex;
+  flex-direction: column; /* stack image and text */
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.15);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+/* Hover effect on cards */
+.game-card:hover {
+  transform: scale(1.05);
+  box-shadow: 0 8px 16px rgb(0 0 0 / 0.2);
+}
+.game-card img {
+  height: 220px;  /* taller image section */
+  object-fit: cover;
+  width: 100%;
+  border-radius: 20px;
+}
+
+.game-info {
+  padding: 15px;
+  display: flex;
+  flex-direction: column;
+  align-items: center; /* keep content horizontally centered */
+  text-align: center;
+  height: 100%; /* make it fill the card */
+  color:#333;
+  text-decoration: none;
+  
+}
+
+.game-info h3 {
+  margin-bottom: 8px;
+  text-decoration: none; /* small space after title */
+}
+
+.game-info p {
+  margin: 0 0 10px 0; /* consistent spacing below description */
+  font-size: 16px;
+  line-height: 1.4;
+  flex-grow: 1;
+  text-decoration: none; /* pushes status badge to bottom */
+}
+
+.status {
+  display: inline-block;
+  padding: 8px 16px;
+  border-radius: 8px;
+  font-size: 14px;
+  font-weight: bold;
+  margin-top: auto;
+  text-decoration: none; /* ensures status stays at bottom */
+}
+
+.status.completed {
+  background: #e6f7e6;
+  color: #28a745;
+}
+
+.status.in-progress {
+  background: #fff3cd;
+  color: #d39e00;
+}
+
+.status.not-started {
+  background: #f8d7da;
+  color: #c82333;
+}
+/* Remove underline from all links inside game cards */
+.game-card-link {
+  text-decoration: none; /* removes underline */
+  color: inherit;        /* keeps the text color of children */
+}
+
+/* Optional: hover effect for the link (so it doesn’t change color unexpectedly) */
+.game-card-link:hover {
+  color: inherit;
+  text-decoration: none;
+}
+/* Header row container */
+/* Wrapper for arrow + heading row */
+/* Header row wrapper for back button + title */
+.header-row {
+  position: relative;
+  margin-top: 20px;   /* same spacing from navbar on all pages */
+  display: flex;
+  align-items: center;
+  justify-content: center; /* centers heading text */
+}
+
+/* Back button inside header row */
+.header-row .back-button {
+  position: absolute;
+  left: 20px;
+  top: 50%;
+  transform: translateY(-50%); /* keeps arrow vertically centered */
+  background: rgba(255, 255, 255, 0.85);
+  border: none;
+  padding: 10px 18px;
+  border-radius: 8px;
+  font-size: 16px;
+  font-weight: bold;
+  cursor: pointer;
+  z-index: 1000;
+  transition: all 0.2s ease-in-out;
+}
+
+/* Back button hover */
+.header-row .back-button:hover {
+  background: #f0f0f0;
+  transform: translateY(-50%) scale(1.05);
+}
+
+/* Consistent heading style */
+.header-row h2 {
+  margin: 0;
+  font-size: 25px;
+  font-weight: bold;
+  color: black;
+  text-align: center;
+}

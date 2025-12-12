@@ -1,0 +1,341 @@
+/* Navbar */
+.navbar {
+  display: flex;
+  justify-content: space-between; /* ✅ logo left, everything else right */
+  align-items: center;
+  background: linear-gradient(90deg, #3bb19b, #2d8f7e);
+  padding: 12px 30px;
+  color: white;
+  box-shadow: 0px 3px 10px rgba(0,0,0,0.15);
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 1000;
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+  font-weight: 700;
+  font-size: 30px;
+  gap: 10px;
+  color: #04201b;
+}
+
+.logo-button {
+  background-color: #ff7f11;
+  border-radius: 50%;
+  width: 30px;
+  height: 30px;
+  border: none;
+  color: white;
+  font-weight: bold;
+  font-size: 20px;
+  cursor: pointer;
+}
+
+/* Right section */
+
+/* Right section container */
+.nav-right {
+  display: flex;
+  align-items: center;
+  gap: 20px; /* space between Learn button and profile icon */
+}
+
+/* Learn with AI button */
+.learn-ai-button {
+  background-color: #ff7f11;
+  color: white;
+  font-weight: 600;
+  border: none;
+  padding: 8px 16px;
+  border-radius: 8px;
+  cursor: pointer;
+  font-size: 16px;
+  transition: 0.3s ease;
+}
+
+.learn-ai-button:hover {
+  background-color: #411e02;
+  box-shadow: 0 0 8px rgba(255, 127, 17, 0.6);
+}
+
+
+/* Links */
+.nav-links {
+  display: flex;
+  gap: 30px;
+  margin-left: 900px;
+}
+
+.nav-links a {
+  text-decoration: none;
+  font-size: 20px;
+  font-weight: 500;
+  color: #052e28;
+  transition: 0.3s ease;
+}
+
+.nav-links a:hover {
+  color: #f3ecaa;
+  text-shadow: 0 0 8px rgba(255, 209, 102, 0.6);
+  border-bottom: 1px solid #333;
+}
+
+/* Profile */
+.profile-icon img {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  cursor: pointer;
+  margin-right: 40px;
+}
+
+.nav-links a.active {
+  color:#0b483c;
+  font-weight: bold;
+  border-bottom: 1px solid black;
+}
+
+/* Profile Dropdown Styles */
+.profile-dropdown {
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+
+.profile-trigger {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  cursor: pointer;
+}
+
+.profile-trigger img {
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  object-fit: cover;
+}
+
+.dropdown-arrow {
+  font-size: 10px;
+  color: #555;
+  transition: transform 0.2s;
+}
+
+/* Optional: rotate arrow when open */
+/* .profile-dropdown.active .dropdown-arrow {
+  transform: rotate(180deg);
+} */
+
+.dropdown-menu {
+  position: absolute;
+  top: 100%;
+  right: 0;
+  background: white;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+  min-width: 120px;
+  z-index: 1000;
+  margin-top: 8px;
+}
+
+.logout-button {
+  width: 100%;
+  padding: 10px 16px;
+  background: none;
+  border: none;
+  text-align: left;
+  cursor: pointer;
+  font-size: 14px;
+  color: #e74c3c;
+  border-radius: 6px;
+}
+
+.logout-button:hover {
+  background-color: #fdf6f6;
+}
+/* Navbar */
+body {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: linear-gradient(90deg, #3bb19b, #2d8f7e);
+  padding: 12px 30px;
+  color: white;
+  box-shadow: 0px 3px 10px rgba(0,0,0,0.15);
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw; /* ✅ More reliable than 100% for fixed elements */
+  z-index: 1000;
+  box-sizing: border-box; /* ensures padding is included in width */
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+  font-weight: 700;
+  font-size: 30px;
+  gap: 10px;
+  color: white;
+}
+
+.logo-button {
+  background-color: #ff7f11;
+  border-radius: 50%;
+  width: 30px;
+  height: 30px;
+  border: none;
+  color: white;
+  font-weight: bold;
+  font-size: 20px;
+  cursor: pointer;
+}
+
+/* Right section */
+
+/* Right section container */
+.nav-right {
+  display: flex;
+  align-items: center;
+  gap: 20px; /* space between Learn button and profile icon */
+}
+
+/* Learn with AI button */
+.learn-ai-button {
+  background-color: #ff7f11;
+  color: white;
+  font-weight: 600;
+  border: none;
+  padding: 8px 16px;
+  border-radius: 8px;
+  cursor: pointer;
+  font-size: 16px;
+  transition: 0.3s ease;
+  /* ❌ DELETE: margin-right: 40px; */
+}
+
+.learn-ai-button:hover {
+  background-color: #411e02;
+  box-shadow: 0 0 8px rgba(255, 127, 17, 0.6);
+}
+
+
+/* Links */
+/* Nav links inside the right section */
+.nav-right {
+  display: flex;
+  align-items: center;
+  gap: 30px; /* space between nav-links, button, and profile */
+}
+
+.nav-links {
+  display: flex;
+  gap: 20px;
+  align-items: center;
+}
+
+.nav-links a {
+  text-decoration: none;
+  font-size: 20px;
+  font-weight: 500;
+  color: white;
+  transition: 0.3s ease;
+}
+
+.nav-links a:hover {
+  color: #f3ecaa;
+  text-shadow: 0 0 8px rgba(255, 209, 102, 0.6);
+}
+
+.nav-links a.active {
+  color: #0b483c;
+  font-weight: bold;
+  border-bottom: 1px solid black;
+}
+
+/* Profile */
+/* .profile-icon img {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  cursor: pointer;
+  margin-right: 60px;
+} */
+
+/* .nav-links a.active {
+  color:#0b483c;
+  font-weight: bold;
+  border-bottom: 1px solid black;
+} */
+/* Profile dropdown container */
+.profile-dropdown {
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+
+/* Clickable trigger area (image + arrow) */
+.profile-trigger {
+  display: flex;
+  align-items: center;
+  gap: 16px; /* space between image and arrow */
+  cursor: pointer;
+}
+
+.profile-trigger img {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+}
+
+/* Down arrow styling */
+.down-arrow {
+  font-size: 14px;
+  color: white;
+  transition: transform 0.3s ease;
+  line-height: 1;
+}
+
+.down-arrow.open {
+  transform: rotate(180deg);
+}
+
+/* Dropdown menu */
+.dropdown-menu {
+  position: absolute;
+  top: 100%;
+  right: 0;
+  background: white;
+  border-radius: 8px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+  overflow: hidden;
+  min-width: 120px;
+  z-index: 1001;
+}
+
+.dropdown-menu button {
+  width: 100%;
+  padding: 10px 16px;
+  background: none;
+  border: none;
+  text-align: left;
+  cursor: pointer;
+  font-size: 16px;
+  color: #333;
+  transition: background 0.2s;
+}
+
+.dropdown-menu button:hover {
+  background-color: #f0f0f0;
+}
