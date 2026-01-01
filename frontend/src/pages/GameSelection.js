@@ -2,9 +2,7 @@ import React, { useEffect, useState } from "react";
 import "../styles/GameSelection.css";
 import { useNavigate } from "react-router-dom";
 import { Link } from "react-router-dom";
-
-// Remove Navbar import if it causes UI duplication
-// import Navbar from "./Navbar"; // ❌ COMMENT OUT OR REMOVE
+import Navbar from "./Navbar";
 
 const GameSelection = () => {
   const navigate = useNavigate();
@@ -151,13 +149,12 @@ const handleGameClick = async (gameName, event) => {
     <div className="mode-selection-container" style={{ position: "relative", minHeight: "100vh" }}>
       <div style={backgroundStyle} />
 
-      {/* ❌ REMOVE Navbar to avoid duplicate UI layers */}
-      {/* <Navbar /> */}
+      <Navbar />
 
       <div className="header-row">
         <button
           className="back-button"
-          onClick={() => window.history.length > 2 ? navigate(-1) : navigate('/')}
+          onClick={() => window.history.length > 2 ? navigate('/mode') : navigate('/')}
         >
           ←
         </button>

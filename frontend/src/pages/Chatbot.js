@@ -73,11 +73,11 @@ export default function Chatbot() {
         <div id="chatbot-panel">
           <div className="chatbot-header">
             <img
-              src="https://cdn-icons-png.flaticon.com/128/14732/14732754.png"
+              src="Bot1.png"
               alt="Bot"
               className="chatbot-avatar"
             />
-            <strong>Cookoo Bot</strong>
+            <strong>Edu Bot</strong>
             <span id="close-chatbot" onClick={() => setIsOpen(false)}>
               &times;
             </span>

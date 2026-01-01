@@ -5,7 +5,7 @@ import Navbar from "./Navbar";
 
 export default function CategoryPage() {
   const initialConcepts = [
-    "Ratios and Percentage",
+    "Blood Relation and coding decoding",
     "Distance and Velocity",
     "Time and Speed",
     "Profit and Loss",

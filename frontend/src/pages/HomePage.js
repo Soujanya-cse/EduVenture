@@ -20,6 +20,12 @@ const HomePage = () => {
       navigate("/login"); // Go to login page if not logged in
     }
   };
+ const handleGameClick = (feature) => {
+    if (feature === "personalized") {
+      navigate("/category"); // Route to topic selection page
+    }
+  };
+
 
   // 🔹 Handle click for the "Quick glance feature card
   const handleFeatureClick = (feature) => {
@@ -88,7 +94,11 @@ const HomePage = () => {
         <section className="features-section">
           <h2>Why to Choose EduVenture?</h2>
           <div className="features-container">
-            <div className="feature-card">
+            
+            <div className="feature-card"
+             onClick={() => handleGameClick("personalized")}
+              style={{ cursor: "pointer" }}>
+
               <img src="/icon.jpeg" alt="Interactive Games" />
               <h3>Interactive Games</h3>
               <p>Learn concepts while playing.</p>
